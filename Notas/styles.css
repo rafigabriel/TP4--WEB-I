@@ -1,0 +1,118 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    text-align: center;
+    justify-content: center; /* Centraliza a caixa principal */
+    min-height: 100vh; /* Faz a página ocupar a altura completa */
+}
+
+/* Contêiner principal com borda flutuante */
+.container {
+    background-color: #fff;
+    border: 2px solid #ddd; /* Adiciona a borda ao redor */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para o efeito de flutuação */
+    border-radius: 10px; /* Bordas arredondadas para um visual suave */
+    padding: 20px;
+    width: 500px; /* Define a largura da caixa */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+/* Título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Caixa de Input de Notas */
+.note-input {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    margin-bottom: 20px;
+}
+
+.note-input input,
+.note-input textarea {
+    width: 100%; /* Faz o input e textarea ocuparem toda a largura possível */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.note-input button {
+    width: 504px; /* Faz o botão ocupar toda a largura do contêiner */
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Campo de Pesquisa */
+.search-container {
+    width: 100%; /* Define a largura total do campo de pesquisa */
+    max-width: 500px; /* Limita a largura máxima do campo de pesquisa */
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.search-container input {
+    width: 100%; /* Faz o campo de pesquisa ocupar toda a largura */
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Caixa de Notas */
+.note-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+/* Cada Nota */
+.note {
+    width: 200px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease;
+    text-align: left; /* Mantém o texto à esquerda dentro da nota */
+}
+
+.note:hover {
+    transform: scale(1.05);
+}
+
+/* Botão de Remover Nota */
+.note button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.note {
+    animation: fadeIn 0.3s ease-in;
+}

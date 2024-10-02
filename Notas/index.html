@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicativo de Notas</h1>
+    
+        <div class="note-input">
+            <input type="text" id="note-title" placeholder="Título da Nota" maxlength="50">
+            <textarea id="note-content" placeholder="Conteúdo da Nota" maxlength="200"></textarea>
+            <button onclick="addNote()">Adicionar</button>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar notas..." onkeyup="searchNotes()">
+        </div>
+    
+        <div id="note-container" class="note-container"></div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
