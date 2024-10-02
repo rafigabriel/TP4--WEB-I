@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TO-DO LIST</h1>
+
+        <div class="add-task">
+            <input type="text" id="new-task" placeholder="Insira aqui sua nova tarefa">
+            <button onclick="addTask()">Salvar</button>
+        </div>
+
+        <div class="filters">
+            <button onclick="filterTasks('all')">Todos</button>
+            <button onclick="filterTasks('notCompleted')">Não concluídos</button>
+            <button onclick="filterTasks('completed')">Concluídos</button>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <div class="footer">
+            <p id="task-count">Total: 0 de 0 concluídas</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
